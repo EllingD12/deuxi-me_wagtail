@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mysite/css/mysite.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>{{ page.title }}</h1>
+        <div class ="carte">
+            <p>Notre jardin s’étend sur 400m², avec une vingtaine de parcelles individuelles et un espace collectif. Chaque membre peut cultiver sa propre parcelle, participer aux récoltes communes, ou simplement venir donner un coup de main le samedi matin.</p>
+        </div>
+            <nav class="boutons">
+                <a class="bouton" href="/accueil/">Accueil</a>
+                <a class="bouton" href="/le-jardin/">Le jardin</a>
+                <a class="bouton" href="/competences/">Compétences</a>
+            </nav>
+{% endblock %}

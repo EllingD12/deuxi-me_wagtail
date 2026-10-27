@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #080c11;
+    background-color: #16a085;
+    line-height: 1.6;
+    max-width: 1700px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 700px) 220px;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;   /* au lieu de start : toutes les cellules font la même hauteur */
+    grid-template-columns: 220px minmax(0, 1100px) 220px;
+}
+
+
+.contenu {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* La galerie disparaît comme boîte : ses images entrent dans la grille */
+.galerie {
+    display: contents;
+}
+
+.galerie img:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.galerie img:last-child {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.galerie img {
+    width: 100%;            /* au lieu de 10% */
+    height: 100%;
+    object-fit: cover;      /* l'image remplit la cellule sans se déformer (rognée si besoin) */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Carte centrale */
+.carte {
+    background-color: #fdfdfd;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;   /* espace entre le h1 et la boîte */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Image à l'intérieur de la carte */
+.carte img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+}
+
+.carte video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+.carte iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+/* Boutons de navigation */
+.boutons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.bouton {
+    background-color: #16a085;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 25px;
+    transition: background-color 0.2s;
+}
+
+.bouton:hover {
+    background-color: #0e6b58;
+}
